@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+}
+header {
+  background-color: purple;
+}
+.main-header h3 {
+  color: white;
+}
+button {
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: right;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.submit {
+  background-color: purple;
+}
+/* Blue */
+.reset {
+  background-color: #f44336;
+}
+/* Red */
+.botondiv {
+  text-align: right;
+}
+.logotipo {
+  width: 110px;
+  margin: 10px 0px 0px;
+}
+.containercards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+.cardContainer {
+  text-align: center;
+}
+.cardContainer img {
+  width: 180px;
+  height: auto;
+}
+.contenedorDE {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.imagenes {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: imagenes;
+}
+.aval {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: aval;
+}
+.solicitante {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: solicitante;
+}
+.estatus {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: status;
+}
+.prospecto {
+  display: grid;
+  grid-template-areas: "status solicitante aval imagenes";
+  border-radius: 25px;
+  border: 1px solid purple;
+}
+.prospecto img {
+  width: 10%;
+}

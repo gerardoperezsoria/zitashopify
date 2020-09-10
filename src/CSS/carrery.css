@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+}
+button {
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.submit {
+  background-color: #008CBA;
+}
+/* Blue */
+.reset {
+  background-color: #f44336;
+}
+/* Red */
+.edad {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: edad;
+}
+.laboral {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: laboral;
+}
+.ingreso {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: ingreso;
+}
+.contenedorDE {
+  display: grid;
+  grid-template-areas: "edad ingreso laboral";
+}
+.contenidoDE h3 {
+  text-align: left;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+}
+.div--principal {
+  display: grid;
+  grid-template-areas: "imagen listas" "boton boton";
+  position: absolute;
+  top: 50%;
+  /* Buscamos el centro horizontal (relativo) del navegador */
+  left: 50%;
+  /* Buscamos el centro vertical (relativo) del navegador */
+  width: 600 px;
+  /* Definimos el ancho del objeto a centrar */
+  height: 400px;
+  /* Definimos el alto del objeto a centrar */
+  margin-top: -200px;
+  /* Restamos la mitad de la altura del objeto con un margin-top */
+  margin-left: -300px;
+  /* Restamos la mitad de la anchura del objeto con un margin-left */
+}
+.div--principal ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.div--principal li {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+.div--principal li:last-child {
+  border: none;
+}
+.div--principal .imagen {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: imagen;
+  background-color: #D358F7;
+}
+.div--principal .boton {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: boton;
+  background-color: #0066CC;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+}
+.div--principal .listas {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: listas;
+  background-color: #D35000;
+  max-width: 320px;
+}
+.div--principal img {
+  max-width: 320px;
+}

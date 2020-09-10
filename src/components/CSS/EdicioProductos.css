@@ -1,0 +1,19 @@
+.buttonbuscar{
+    grid-area: buttonbuscar;
+}
+
+.buscador{
+    grid-area: buscador;
+    height: 0px;
+}
+
+.campoidproducto{
+    grid-area: campoidproducto;
+}
+
+.divHijo{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+      "campoidproducto buscador buttonbuscar";
+}

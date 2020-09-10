@@ -1,0 +1,51 @@
+  .imagendetalle {
+    grid-area: imagendetalle;
+
+      width: 100%;
+      object-fit: cover;
+  }
+  
+      .buttondetalle {
+          grid-area: buttondetalle;
+      }
+  
+      .precio {
+          grid-area: precio;
+      }
+  
+      .total {
+          grid-area: total;
+      }     
+
+      @media (max-width: 1280px) {
+        .contenidodetalle{
+          display: grid;
+          grid-template-areas:
+              "imagendetalle precio"
+              "imagendetalle total"              
+              "imagendetalle cantidad"
+              "imagendetalle talla"
+              "buttondetalle"
+          }      
+          .contenidodetalle .imagendetalle img{
+            width: 50%;
+            }
+      }    
+
+
+      @media (max-width: 480px) {
+        .contenidodetalle{
+          display: grid;
+          grid-template-areas:
+              "imagendetalle"
+              "precio"
+              "total"              
+              "cantidad"
+              "talla"
+              "buttondetalle";
+          }   
+          .contenidodetalle .imagendetalle img{
+            width: 100%;
+            }             
+      }
+
