@@ -38,7 +38,7 @@
   "homepage": "http://35.223.184.195/build/",
   "scripts": {
     "start": "cross-env PORT=3006 react-scripts start",
-    "build": "react-scripts build",
+    "build": "node --max_old_space_size=8192 node_modules/.bin/react-scripts start --progress --env.prod",
     "test": "jest",
     "eject": "react-scripts eject"
   },
