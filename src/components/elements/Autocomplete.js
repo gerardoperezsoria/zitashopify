@@ -310,16 +310,13 @@ export default function IntegrationReactSelect({ suggestions, evento }) {
   const classes = useStyles();
   const theme = useTheme();
   const [single, setSingle] = React.useState(null);
-  const [multi, setMulti] = React.useState(null);
+  
 
   const handleChangeSingle = value => {
     setSingle(value);
     evento({target:{value: value.value}});
   };
 
-  const handleChangeMulti = value => {
-    setMulti(value);
-  };
 
   const selectStyles = {
     input: base => ({

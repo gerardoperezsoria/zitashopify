@@ -1,23 +1,10 @@
 import React, { useEffect, useState, Fragment } from 'react';
-import Tooltip from '@material-ui/core/Tooltip';
-//import { makeStyles } from '@material-ui/core/styles';
-import SnackBar from '../components/SnackBar'
-import ModalGenerico from '../components/elements/ModalGenerico'
-import Stepper from '../components/elements/Stepper'
+
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Link,
-  useRouteMatch,
   useParams,
   useHistory
 } from "react-router-dom";
-import Input from '../components/elements/Input'
-import IconButton from '../components/elements/IconButton'
-import Container from '../components/Container'
-import Tabla from '../components/elements/Tabla'
-import DataCarrito from '../components/DataCarrito'
 import ButtonConIcon from '../components/elements/ButtonConIcon'
 import Menu from '../components/Menu'
 import '../components/CSS/carrito.css'

@@ -1,22 +1,12 @@
 import React, { useEffect, useState, Fragment } from 'react';
-import Tooltip from '@material-ui/core/Tooltip';
+
 //import { makeStyles } from '@material-ui/core/styles';
-import SnackBar from '../components/SnackBar'
-import ModalGenerico from '../components/elements/ModalGenerico'
-import Stepper from '../components/elements/Stepper'
+
+
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Link,
-  useRouteMatch,
   useParams,
-  useHistory
 } from "react-router-dom";
-import Input from '../components/elements/Input'
-import IconButton from '../components/elements/IconButton'
-import Container from '../components/Container'
-import Tabla from '../components/elements/Tabla'
 import ExpansionPanels from '../components/elements/ExpansionPanels'
 import Chips from '../components/Chips'
 import Menu from '../components/Menu'
@@ -43,7 +33,7 @@ export default function Uploads() {
     // { id: 0, articulos: 3, ganacia: 500, total: 200, telefono: "5566443322", detalle: [{ id: 1, precio: 23, cantidad: 56 }, { id: 1, precio: 23, cantidad: 56 }, { id: 1, precio: 23, cantidad: 56 }] }
   ]
   const [datos, setDatos] = useState(pedidos);
-  const [texto, setTexto] = useState();
+
   let { clavecliente } = useParams();
   const opcionesmenu = <Fragment>
     <div><Link to={`/ConfiguraPrecio/${clavecliente}`}>Configura precios</Link></div>
@@ -51,7 +41,7 @@ export default function Uploads() {
 
   useEffect(() => {
     evento()
-  }, [])
+  })
 
   const evento = async () => {
     var url = 'http://35.223.184.195:3007/pedidos';
@@ -76,6 +66,7 @@ export default function Uploads() {
       if ((arrayPedidos.indexOf(idp) === -1) || (arrayPedidos.length === 0)) {
         arrayPedidos.push(idp);
       }
+      return true
     })
     let datosPedidos = [];
     for (let i = 0; i < arrayPedidos.length; i++) {
@@ -111,7 +102,7 @@ export default function Uploads() {
       }
       );
     let dataJSON = JSON.parse(datosbusqueda);
-    if (dataJSON.status = 200) {
+    if (dataJSON.status === 200) {
       alert('Articulo eliminado del pedido.')
     }else{
       alert('Error al eliminar el articulo del pedido.')
@@ -124,9 +115,9 @@ export default function Uploads() {
     eliminardepedido(id)
   }
 
-  const eventoText = (palabra) => {
-    setTexto(palabra)
-  }
+
+
+
 
   return (
     <Fragment>

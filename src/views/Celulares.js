@@ -1,19 +1,9 @@
 import React, { useEffect, useState, Fragment } from 'react';
-import {
-    Link,
-    useParams
-} from "react-router-dom";
 import Container from '../components/Container'
-// import '../components/CSS/home.css'
-import Menu from '../components/Menu'
 
 export default function Uploads() {
     const [datos, setDatos] = useState();
-    let { idcatalogo, clavecliente, invitado } = useParams();
-    const opcionesmenu = <Fragment>
-        <div><Link to={`/porcatalogo/${idcatalogo}/${clavecliente}/${invitado}`}>Inicio</Link></div>
-        <div><Link to={`/carrito/${idcatalogo}/${clavecliente}/${invitado}`}>Mi carrito</Link></div>
-    </Fragment>
+
     useEffect(() => {
         window.onbeforeunload = function (e) {
             return 'Texto de aviso';

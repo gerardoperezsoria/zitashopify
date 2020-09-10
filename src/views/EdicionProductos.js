@@ -1,17 +1,8 @@
 import React, { useEffect, useState, Fragment } from 'react';
-import Tooltip from '@material-ui/core/Tooltip';
-import SnackBar from '../components/SnackBar'
-import ModalGenerico from '../components/elements/ModalGenerico'
-import Stepper from '../components/elements/Stepper'
 import FormularioEP from '../components/FormularioEP';
-import {
-    Link,
-    useParams
-} from "react-router-dom";
-import Input from '../components/elements/Input'
-import IconButton from '../components/elements/IconButton'
+
 import ContainerEdicion from '../components/ContainerEdicion'
-import Autocomplete from '../components/elements/Autocomplete'
+
 import Button from '../components/elements/Button'
 // import '../components/CSS/home.css'
 import '../components/CSS/EdicioProductos.css'
@@ -19,15 +10,15 @@ import '../components/CSS/EdicioProductos.css'
 export default function Uploads() {
     const [datos, setDatos] = useState([]);
     const [dataCatalogos, setCatalogos] = useState([{ label: 'Albania' }])
-    const [texto, setTexto] = useState();
+
     const [formulario, setformulario] = useState({
         idProducto: "",
         idCatalogos: ""
     });
-    const [dataClear, setDataClear] = useState("");
-    const [opciones, setOpciones] = useState(<Link to="/invitado">Ingresar como invitado</Link>)
-    const [modal, setModal] = useState(false)
-    let { cliente, invitado } = useParams();
+    const [dataClear] = useState("");
+
+
+
 
     const catalogos = async () => {
         var url = 'http://35.223.184.195:3007/buscarcatalogos';

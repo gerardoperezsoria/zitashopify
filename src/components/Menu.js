@@ -1,14 +1,5 @@
 import React,{Fragment} from 'react';
-import ToggleMenu from '../components/elements/ToggleMenu'
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useRouteMatch,
-    useParams,
-    Redirect
-  } from "react-router-dom";
+
 import './CSS/Menu.css'
 function Menu({opcionesmenu}) {
   return <Fragment>

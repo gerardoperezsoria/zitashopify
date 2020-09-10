@@ -4,13 +4,8 @@ import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
 import ButtonConIcon from '../components/elements/ButtonConIcon'
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
     Link,
-    useRouteMatch,
-    useParams,
-    useHistory
+    useParams
 } from "react-router-dom";
 import Menu from '../components/Menu'
 
@@ -33,9 +28,7 @@ const marks = [
     },
 ];
 
-function valueLabelFormat(value) {
-    return marks.findIndex(mark => mark.value === value) + 1;
-}
+
 
 export default function DiscreteSlider() {
     const [Credito, setCredito] = useState(0)
@@ -56,14 +49,7 @@ export default function DiscreteSlider() {
         setCredito(value);
         return `${value}%`;
     }
-    function valuetextcontado(value) {
-        setContado(value);
-        return `${value}%`;
-    }
-    function valuetextamigos(value) {
-        setAmigos(value);
-        return `${value}%`;
-    }
+
     const configurarPrecio = async () => {
         let porcentajePrecio = {
             credito: Credito,
@@ -111,11 +97,6 @@ export default function DiscreteSlider() {
             console.log(Credito,"*",Contado,"*",Amigos);
         }
     }
-
-    useEffect(() => {
-        consultaprecios();
-    },[])
-
 
     return (
         <>

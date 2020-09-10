@@ -1,12 +1,7 @@
 import React, { useEffect, useState, Fragment } from 'react';
-import {
-    Link,
-    useParams
-} from "react-router-dom";
 
 export default function Uploads() {
     const [datos, setDatos] = useState([]);
-    let { idcatalogo, clavecliente, invitado } = useParams();
 
     useEffect(() => {
         window.onbeforeunload = function (e) {
@@ -49,14 +44,14 @@ export default function Uploads() {
                 </div>
             <div className="imagenes">
                 <h4>Imagenes</h4>
-            <img src={`http://localhost:3007/static/${imagen[0]}`}/>
-            <img src={`http://localhost:3007/static/${imagen[1]}`}/>
-            <img src={`http://localhost:3007/static/${imagen[2]}`}/>
-            <img src={`http://localhost:3007/static/${imagen[3]}`}/>
-            <img src={`http://localhost:3007/static/${imagen[4]}`}/>
-            <img src={`http://localhost:3007/static/${imagen[5]}`}/>
-            <img src={`http://localhost:3007/static/${imagen[6]}`}/>
-            <img src={`http://localhost:3007/static/${imagen[7]}`}/>
+            <img src={`http://localhost:3007/static/${imagen[0]}`} alt=""/>
+            <img src={`http://localhost:3007/static/${imagen[1]}`} alt=""/>
+            <img src={`http://localhost:3007/static/${imagen[2]}`} alt=""/>
+            <img src={`http://localhost:3007/static/${imagen[3]}`} alt=""/>
+            <img src={`http://localhost:3007/static/${imagen[4]}`} alt=""/>
+            <img src={`http://localhost:3007/static/${imagen[5]}`} alt=""/>
+            <img src={`http://localhost:3007/static/${imagen[6]}`} alt=""/>
+            <img src={`http://localhost:3007/static/${imagen[7]}`} alt=""/>
             </div>
                    <div className="solicitante">
                    <h4>Solicitante</h4>

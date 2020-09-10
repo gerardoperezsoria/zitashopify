@@ -2,18 +2,13 @@ import React, {useState, Fragment, useEffect} from 'react';
 import Formulario from '../components/FormularioDocs';
 import DropZone from '../components/DropZone'
 import {makeStyles} from '@material-ui/core/styles';
-import Button from '../components/elements/Button'
+
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Steppercompra from '../HOCS/Stepper'
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
     Link,
-    useRouteMatch,
     useParams,
-    Redirect,
     useHistory
 } from "react-router-dom";
 
@@ -29,17 +24,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Uploads() {
-    const opcionesmenu = <Fragment>
-        <div>
-            <Link to={`/crearcatalogos`}>Catalogos</Link>
-        </div>
-        <div>
-            <Link to={`/precios`}>Precios</Link>
-        </div>
-        <div>
-            <Link to={`/editararticulos`}>Editar articulos</Link>
-        </div>
-    </Fragment>
     const [dZ, setdZ] = useState();
 
     const [formularioS, setformularioS] = useState();
@@ -50,12 +34,8 @@ export default function Uploads() {
     let {
         laboral,
         edad,
-        ingreso,
-        idProducto,
-        descripcion,
-        precioventa
+        ingreso
     } = useParams();
-    const longText = `Paso 1: Aqui puedes seleccionar o arrastrar la imagen tu articulo.`;
 
     const classes = useStyles();
 
